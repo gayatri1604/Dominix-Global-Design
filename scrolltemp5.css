@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    font-family: 'Arial', sans-serif;
+    background: rgba(34, 59, 78, 0.80); 
+    /* background-color: #1a2c44; */
+    color: white;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    height: 100vh;
+    overflow-x: hidden;
+} 
+
+html,body{
+    overflow-x: hidden;
+}
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Background behind content */
+    background: rgba(34, 59, 78, 0.80);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Other existing styles */
+
+/* Adjusted your previous code for the circles, etc. */
+.circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(102, 178, 255, 0.8);
+    border-radius: 50%;
+    filter: blur(150px);
+    animation: moveCircle 8s ease-in-out infinite;
+}
+
+.circle:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    top: 20%;
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.circle:nth-child(3) {
+    top: 55%;
+    left: 25%;
+    animation-delay: 6s;
+}
+
+.circle:nth-child(4) {
+    top: 65%;
+    left: 80%;
+    animation-delay: 9s;
+}
+
+.circle:nth-child(5) {
+    top: 75%;
+    left: 45%;
+    animation-delay: 12s;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(120px, 120px);
+    }
+    50% {
+        transform: translate(-120px, -120px);
+    }
+    75% {
+        transform: translate(90px, -90px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Add gradient animation keyframes */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+header {
+    /* background-color: #2a3b4c; */
+    background: rgba(0, 0, 0, 0.20);
+    padding: 20px;
+    margin-top: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 48px;
+
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 48px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+    .content-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px; /* Limits width on large screens */
+        width: 100%;       /* Full width on smaller screens */
+        margin: 0 auto;    /* Centers the content */
+        padding: 0 20px;   /* Adds padding on the sides */
+        box-sizing: border-box; /* Ensures padding doesn't expand the width */
+    }
+        
+        
+        /* Main background image section */
+        .main-image {
+            background-image: url('scrolltemp5img.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 600px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        /* Content section with title and text */
+        .content-section {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            justify-content: space-between;
+        }
+
+        .title-section {
+            /* font-family: 'LEMON-MILK', sans-serif; */
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            margin-right: 30px;
+            text-align: left;
+            margin-left: 90px;
+            margin-top: 50px;
+        }
+
+        .title-section h1 {
+            font-size: 48px;
+            /* font-family: "LEMON MILK"; */
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin: 0;
+            margin-right: 370px;
+            /* margin-left: ; */
+            /* line-height: 1; Closer spacing between "DIGITAL" and "TRANSFORMATION" */
+            /* text-align: left; */
+            /* margin-right: 20px; */
+            /* margin-left: -10px; Adjusted left margin to align heading */
+        }
+         /* Specific alignment for "DIGITAL" and "TRANSFORMATION" */
+
+        .title-section .digital {
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: left;
+            /* align-self: flex-start; */
+        }
+
+        .title-section .transformation {
+            margin-right: 100px;
+            margin-left: 100px;
+            text-align: left;
+            /* align-self: flex-start; */
+            /* margin-left: 0; Align transformation with digital */
+        }
+
+        /* Vertical line */
+        .vertical-line {
+            width: 2px;
+            height: 150px;
+            background-color: #ece7e7;
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+
+        /* Text with subtle animation */
+        .text-section {
+            font-size: 16px;
+            font-family: Montserrat; 
+            /* font-style: normal;
+            font-weight: 700; */
+            line-height: normal;
+            color: #fff;
+            max-width: 600px;
+            /* animation: fadeInText 3s ease-in-out; */
+        }
+        /* Bold specific text */
+        .text-section b {
+            font-weight: bold;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            /* align-items: flex-start; */
+            padding: 40px;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            background-color: transparent;
+            /* background: rgba(0, 0, 0, 0.12); */
+            /* background-color: #2b3b47; */
+            color: #fff;
+        }
+        .footer-logo {
+            /* flex: 1 1 250px; */
+            flex: 1.5;
+            margin-left: 30px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            /* max-width: 300px; */
+        }
+        .footer-logo img{
+            margin-bottom: 10px;
+        }
+        .footer-logo p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cfcfcf;
+        }
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 8px;
+            /* background-color: #2b3b47;  */
+        } 
+        .social-icons a {
+            margin-right: 10px;
+            /* color: yellow;
+            margin-right: 15px;
+            font-size: 20px;
+            text-decoration: none; */
+        }
+        .social-icons img{
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+        .social-icons a:hover {
+            color: #f1c40f;
+        }
+        .footer-section{
+            /* flex: 1 1 150px; */
+            flex: 1;
+            margin-left: 24px;
+            /* margin: 0 20px;
+            /* background-color: #2b3b47;  */
+            /* background: rgba(0, 0, 0, 0.12); */
+            /* margin-right: 40px; */
+            /* min-width: 150px; */
+        }
+        .footer-section h4{
+            margin-bottom: 10px;
+            font-size: 16px;
+            /* font-weight: bold; */
+            color: #fff;
+        }
+        .footer-section ul{
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li{
+            margin-bottom: 5px;
+        }
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #cfcfcf;
+            /* font-size: 14px; */
+        }
+        .footer-section ul li a:hover {
+            color: #f1c40f; /* Yellow hover color */
+        }
+        /* Footer Bottom Section */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background-color: #2b3b47;
+            /* text-align: center; */
+            margin-top: 40px;
+            color: #cfcfcf;
+            font-size: 14px;
+        }
+        .footer-left{
+            text-align: left;
+        }
+        .footer-right{
+            text-align:right;
+        }
+        .footer-section:last-child {
+            margin-bottom: 0; /* Remove extra space */
+        }
+        footer {
+            /* background-color: rgba(0, 0, 0, 0.12); */
+            /* background-color: ; */
+            background-color:  #2b3b47; /*Ensure the background is uniform */
+            padding-bottom: 0; /* Decrease bottom padding */
+        }

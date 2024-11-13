@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(34, 59, 78, 0.80);
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #1e2a39; */
+    color: white;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* padding: 20px;  */
+}
+
+header {
+    /* background-color: #2a3b4c; */
+    background: rgba(0, 0, 0, 0.20);
+    padding: 20px;
+    margin-top: 16px;
+}
+
+nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-right: 48px;
+
+}
+nav .logo {
+font-size: 24px;
+font-weight: bold;
+margin-left: 48px;
+}
+
+nav ul {
+list-style-type: none;
+display: flex;
+}
+
+nav ul li {
+margin-left: 20px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* Layout Wrapper for full screen centering */
+.layout-wrapper {
+    max-width: 1440px;
+    /* height: 2014px; */
+    margin: 0 auto;
+    padding: 20px 48px; /* Adds padding around the page */
+}
+
+/* Main Content */
+.main-content {
+    /* width: 100vw; */
+    /* padding: 0 48px;  Left and right padding  */
+    margin-top: 110px;
+    /* width: calc(100% - 96px);  Total width adjusted for 48px padding on both sides  */
+}
+
+/* Heading */
+.main-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 40px;
+    color: #ffffff;
+    /* padding-left: 0px; */
+    /* margin-top: 80px;  */
+}
+
+/* Grid Section */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 100px;
+    /* width: 100%; */
+}
+
+.grid-item {
+    background-color: rgba(0, 0, 0, 0.1); /* Light yellow background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Slight shadow */
+    overflow: hidden;
+    height: 330px; /* Adjust height as needed */
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    /* background: url('temp1img.png') lightgray 50% / cover no-repeat;
+    background: url(took\ image\ temp1.png) lightgray 50% / cover no-repeat; */
+    border-radius: 25px; 
+}
+.image1{
+    background: url(Acservimg1.png) lightgray 50% / cover no-repeat;
+
+}
+.image2{
+    background: url(ACSERVimg2.png) lightgray 50% / cover no-repeat;
+}
+.image3{
+    background: url(ACSERVimg3.png) lightgray 50% / cover no-repeat;
+}
+.image4{
+    background: url(ACSERVimg4.png) lightgray 50% / cover no-repeat;
+}
+    
+/* .grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+} */
+
+/* Overview Section */
+.overview {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    /* max-width: calc(100% - 96px);  Full width with 48px padding on each side  */
+    width: 100%; 
+    height: 290px;
+    /* padding: 27px 119px 25px 91px; */
+    /* padding: 25px 91px; */
+    padding:  0;
+    gap: 10px;
+    flex-shrink: 0; 
+    background: rgba(0, 0, 0, 0.14);
+    /* background-color: #2a2a36;  Darker background color  */
+    border-radius: 16px;
+    border: 0.2px solid #c9c5c5;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    /* width: 100%; */
+    margin-bottom: 90px;
+    /* padding: 27px 119px 25px 91px; */
+}
+
+.overview-inner {
+      /* align-self: stretch;  */
+      width: 100%;
+      max-width: calc(100% - 48px); /* Adjust this to match grid container if needed */
+      padding: 27px 110px 25px 91px;   
+      /* padding: 30px 0;  Consistent padding to align with grid   */
+      /* padding: 25px 48px;  Symmetrical padding to match grid edges  */
+      box-sizing: border-box; /* Ensures padding is included within width */
+      align-items: center;
+}
+
+.overview h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.overview p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    padding: 40px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #2b3b47;
+    color: #fff;
+    gap: 51px;
+}
+.footer-logo {
+    /* flex: 1 1 250px; */
+    flex: 1.5;
+    margin-left: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 300px; */
+}
+.footer-logo img{
+    margin-bottom: 10px;
+}
+.footer-logo p {
+    width:342px;
+    height:87px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 250;
+    line-height: normal;
+    /* line-height: 1.6; */
+    color: #d8d2d2;
+    opacity: 0.9;
+}
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+    /* background-color: #2b3b47; */
+} 
+.social-icons a {
+    margin-right: 10px;
+    /* color: yellow;
+    margin-right: 15px;
+    font-size: 20px;
+    text-decoration: none; */
+}
+.social-icons img{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.social-icons a:hover {
+    color: #f1c40f;
+}
+.footer-section{
+    /* flex: 1 1 150px; */
+    flex: 1;
+    margin-left: 24px;
+    /* margin: 0 20px;
+    background-color: #2b3b47; */
+
+    /* margin-right: 40px; */
+    /* min-width: 150px; */
+}
+.footer-section h4{
+    margin-bottom: 10px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #fff;
+}
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li{
+    margin-bottom: 5px;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: #cfcfcf;
+    /* font-size: 14px; */
+}
+.footer-section ul li a:hover {
+    color: #f1c40f; /* Yellow hover color */
+}
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: #2b3b47;
+    /* text-align: center; */
+    margin-top: 40px;
+    color: #cfcfcf;
+    font-size: 14px;
+}
+.footer-left{
+    text-align: left;
+}
+.footer-right{
+    text-align:right;
+}
+.footer-section:last-child {
+    margin-bottom: 0; /* Remove extra space */
+}
+footer {
+    background-color:  #2b3b47; /* Ensure the background is uniform */
+    padding-bottom: 0; /* Decrease bottom padding */
+}

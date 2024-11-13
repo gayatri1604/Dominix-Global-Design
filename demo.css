@@ -1,0 +1,876 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+html,body{
+    overflow-x: hidden;
+}
+
+body {
+     background: rgba(34, 59, 78, 0.80); 
+    /* background-color: #1e2a39; */
+    color: white;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    margin: 0;
+    padding: 0;
+    position:relative;
+    /* padding: 20px;  */
+}
+/* Add the animated gradient to the background */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Background behind content */
+    background: rgba(34, 59, 78, 0.80);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Other existing styles */
+
+/* Adjusted your previous code for the circles, etc. */
+.circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(102, 178, 255, 0.8);
+    border-radius: 50%;
+    filter: blur(150px);
+    animation: moveCircle 8s ease-in-out infinite;
+}
+
+.circle:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    top: 20%;
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.circle:nth-child(3) {
+    top: 55%;
+    left: 25%;
+    animation-delay: 6s;
+}
+
+.circle:nth-child(4) {
+    top: 65%;
+    left: 80%;
+    animation-delay: 9s;
+}
+
+.circle:nth-child(5) {
+    top: 75%;
+    left: 45%;
+    animation-delay: 12s;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(120px, 120px);
+    }
+    50% {
+        transform: translate(-120px, -120px);
+    }
+    75% {
+        transform: translate(90px, -90px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Add gradient animation keyframes */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+header {
+    /* background-color: #2a3b4c; */
+    background: rgba(0, 0, 0, 0.20);
+    padding: 20px;
+    margin-top: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 48px;
+
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 48px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bg-blue {
+    background:  rgba(34, 59, 78, 0.80); 
+}
+.text-white {
+    color: #fff;
+}
+.custom-card {
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 0;
+}
+.card-content {
+    border-radius: 150px 0 0 150px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px 24px 25px 45px;  
+    /* padding: 18px 55px 18px 55px;  */
+    background: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+.frosted-glass {
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    background-color: rgba(2, 45, 72, 0.3);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+.count {
+    font-size: 100px;
+    font-family: "Londrina Outline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: -20px;
+    line-height: 70px;
+    color: #fff;
+    z-index: 1;
+}
+.text-description {
+    font-size: 12px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 13px; /* 108.333% */
+}
+.heading {
+    font-size: 14px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.container-fluid {
+    background: rgba(34, 59, 78, 0.80); 
+    /* background: linear-gradient(135deg, #0c507b, #0e496b); */
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: relative;
+    width: 370px;
+    height: 370px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 30px;
+    padding: 24px;
+    position: relative;
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+.grid-item h2 {
+    margin: 0 0 16px 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-size: 16px;
+}
+
+.grid-item:nth-child(2) .arrow,
+.grid-item:nth-child(4) .arrow {
+    left: auto;
+    right: 24px;
+}
+
+.center-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0d3b59;
+    border-radius: 15px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+.plus-img {
+    background-image: url("scroll/file/plus.png");
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.center-text {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .card-content {
+        padding: 24px 24px 24px 55px;
+    }
+    .count {
+        font-size: 110px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .card-content {
+        padding: 24px 24px 24px 45px;
+    }
+
+}
+
+/* .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: 100%; */
+    /* max-width: 1200px; Optional, depending on your layout */
+    /* margin: 0 auto;
+} */
+/* 
+.hero-left h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-top: 50px;
+    margin-left: 310px; */
+    /* font-family: LEMON MILK; */
+/* } */
+
+/* .hero-right {
+    width: 40%;
+}
+
+.scroll-section {
+    height: 200px;
+    border-left: 2px solid white;
+    padding-left: 20px;
+    position: relative;
+} */
+
+/* .scroll-section .scroll-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-section .scroll-item.active {
+    display: block;
+    opacity: 1;
+} */
+
+.infinite-slider {
+    /* background-color: #344557; */
+    padding: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin-bottom: 10px;
+}
+.slider{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    animation: scroll 60s linear infinite; /* Slow down the animation (60s) */
+}
+.slider-item {
+    display: flex;
+    align-items: center;
+    margin-right: 28px; /* Space between items */
+}
+.arrow-svg {
+    display: inline-block;
+    margin-left: 28px; /* Space between text and arrow */
+    vertical-align: middle; /* Aligns SVG with text */
+    width: 8px;
+    height: 16px;
+    stroke-width: 2px;
+    stroke: rgba(246, 174, 45, 0.50);
+    stroke-opacity: 1;
+    stroke-width: 2px;
+    
+}
+
+/* .slider p{
+    gap: 28px;
+} */
+/* .slider p {
+    /* display: inline-block;
+    animation: scroll 60s linear infinite; */
+    /* margin-right: 20px;  Add some space between the items in the slider
+     */
+    /* white-space: nowrap;
+    overflow: hidden;
+    animation: scroll 10s linear infinite; */
+/* }  */
+/* 
+.slider > * {
+    margin-right: 28px; 
+  } */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.slider:after {
+    content: '';
+    display: inline-block;
+    width: 100%; /* Ensure the space for content is properly wrapped */
+}
+
+.centered-div {
+    width: 50%; /* Set your desired width */
+    margin: 0 auto; /* Horizontally center */
+    font-family: Neon;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    padding: 20px; /* Optional padding */
+    line-height: normal;
+    text-align: center; /* Center text */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 10px; */
+    width: 100%;
+    margin-top: 40px;
+    max-width: 1200px;  /* Optional: Set a max-width for large screens */
+    margin: 50px auto; /*center the grid */  
+    /* margin-top: 50px;
+    margin-bottom : 20px; */
+    /* position: relative; */
+    gap: 10px;
+    border-radius: 20px;
+    /* Added a larger bottom margin for balance */
+    margin-bottom: 20px; 
+    
+    /* margin-right:10px;
+    margin-left: 10px; */
+    /* overflow: hidden; */
+  }
+  .grid-item-box {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 30px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border: 0.1px solid #979494;
+    box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth transition for box changes */
+}
+  .grid1 img {
+    width: 100%;
+     height: 100%; 
+    /* aspect-ratio: 4 / 3; /*Adjusts the aspect ratio (optional) */
+    /* height: auto;  */
+    border-radius: 25px;
+    border: 0.1px solid #979494; 
+    background: rgba(0, 0, 0, 0.14); /* Slight dark background overlay */
+    box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25); /* Exact shadow as provided */
+    object-fit: cover;
+    /* border: 0.346px solid transparent;  White border as specified  */
+    /* background: rgba(0, 0, 0, 0.14); Transparent black background  */
+    /* background: rgba(0, 0, 0, 0.14); */
+    /* background: rgba(255, 255, 255, 0.9); */
+    /* box-shadow:  10px 20px rgba(0, 0, 0, 0.15),  Subtle outer shadow  */
+    /* 0px 4px 6px rgba(0, 0, 0, 0.1),  Inner shadow for depth  */
+    /* 4px 4px 10px rgba(0, 0, 0, 0.15);  Larger offset shadow for layered effect */
+    /* box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2),  Slight elevation 
+    0px 10px 20px rgba(0, 0, 0, 0.15);  Softer, larger shadow  */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    /* box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+    /* box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);  */
+  }
+  .grid-title {
+    /* display: none; Initially hidden */
+    position: absolute;
+    right: 10px; /* Adjust position to your preference */
+    margin-bottom: 40%;
+    /* bottom: 10px; Position the text at the bottom */
+    /* left: 16px; */
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+    /* z-index: 1; Ensures the text appears above the image */
+/* Hover Effect */
+.grid-item-box:hover img{
+    transform: translateX(-30%); /* Slide the image to the left */
+    /* padding-right: 16px; */
+}
+
+.grid-item-box:hover .grid-title {
+    opacity: 1; /* Fade in text */
+    /* display: inline-block; /* Show the title on hover */
+} 
+
+/* .grid-item-box:hover .grid-image {
+    transform: scale(1.1); /* Slight zoom effect on the image */
+    /* width: 110px; /* Make the image a little larger */
+/* }  */
+
+  .explore-more {
+    display : flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column; /* Stack text and arrow vertically */
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .explore-more a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Stack text and arrow vertically */
+    align-items: center;
+
+    /* position: relative; */
+    /* border: none; */
+    /* background-color: transparent; */
+    /* font-weight: bold; */
+  }
+  .explore-more span {
+    margin-bottom: 5px; /* Adjust space between text and SVG */
+}
+.explore-more svg {
+    width: 28px;
+    height: 11px;
+    fill: none;
+    stroke-width: 1px;
+    stroke: white;
+}
+  /* .explore-more a::after {
+    content: '▼'; /* Down arrow symbol to match the design */
+    /* font-size: 14px;
+    color: white;
+    position: absolute; */
+    /* right: -20px;  Adjust position of the arrow */
+    /* top: 2px;
+  } */ 
+
+  .explore-more a:hover {
+    text-decoration: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Preventing unwanted space when more items are added */
+.explore-more a:focus {
+    outline: none;
+}
+
+/* .grid-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-item {
+    width: calc(33.33% - 20px);
+    background-color: #344557;
+    padding: 10px;
+}
+
+.flex-item.large {
+    width: 66.66%;
+} */
+
+/* footer {
+    background-color: #2a3b4c;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    padding: 40px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #2b3b47;
+    color: #fff;
+    /* flex-wrap: wrap; */
+    /* width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    border-bottom: 1px solid #2c3e50; */
+    /* gap: 40px; */
+}
+.footer-logo {
+    /* flex: 1 1 250px; */
+    flex: 1.5;
+    margin-left: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 300px; */
+}
+.footer-logo img{
+    margin-bottom: 10px;
+}
+.footer-logo p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfcfcf;
+    font-style: italic;
+    font-family: Montserrat;
+}
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+    /* background-color: #2b3b47;  */
+} 
+.social-icons a {
+    margin-right: 10px;
+    /* color: yellow;
+    margin-right: 15px;
+    font-size: 20px;
+    text-decoration: none; */
+}
+.social-icons img{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.social-icons a:hover {
+    color: #f1c40f;
+}
+.footer-section{
+    /* flex: 1 1 150px; */
+    flex: 1;
+    margin-left: 24px;
+    /* margin: 0 20px;
+    background-color: #2b3b47; */
+
+    /* margin-right: 40px; */
+    /* min-width: 150px; */
+}
+.footer-section h4{
+    margin-bottom: 10px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #fff;
+}
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li{
+    margin-bottom: 5px;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: #cfcfcf;
+    /* font-size: 14px; */
+}
+.footer-section ul li a:hover {
+    color: #f1c40f; /* Yellow hover color */
+}
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: #2b3b47;
+    /* text-align: center; */
+    margin-top: 40px;
+    color: #cfcfcf;
+    font-size: 14px;
+}
+.footer-left{
+    text-align: left;
+}
+.footer-right{
+    text-align:right;
+}
+.footer-section:last-child {
+    margin-bottom: 0; /* Remove extra space */
+}
+footer {
+    background-color:  #2b3b47; /* Ensure the background is uniform */
+    padding-bottom: 0; /* Decrease bottom padding */
+}
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;  /* Stack items vertically on small screens */
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+}
+/* .footer-bottom p {
+    text-align: start;
+    margin: 0;
+    font-size: 12px;
+} */
+/* .footer-bottom p1{
+    text-align: center;
+    margin-top: 40px;
+    color: #cfcfcf;
+}
+.footer-bottom p1 p{
+    text-align: right;
+    margin: 0;
+    font-size: 12px;
+} */
+/* .footer-logo {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo svg {
+    width: 150px;
+    height: auto;
+    fill: yellow;
+}
+.footer-logo p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #DADADA;
+    max-width: 250px;
+} */
+/* .social-icons{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.social-icons a {
+    color: yellow;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+} */
+/* .footer-bottom{
+    text-align : center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #DADADA;
+} */
+
+ @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+} 
+/* .footer-item .socials {
+    display: flex; */
+    /* gap: 20px; /* Space between icons */
+
+
+/* .footer-item .socials li {
+    display: inline-block; */
+    /* display: inline;
+    margin-right: 10px; */
+
+
+/* .footer-item .socials li a img {
+    width: 24px; /* Adjust icon size */
+    /* height: 24px;
+    filter: invert(91%) sepia(98%) saturate(7485%) hue-rotate(1deg) brightness(106%) contrast(109%); /* Yellow color */
+
+
+/* .footer-item .socials li a {
+    color: yellow;
+} */
+/* 
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    background-color: #1e2a39;
+    color: white;
+    width: 100%; */
+    /* background-color: #1e2a39; */
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.watch-container {
+    position: relative;
+    width: 300px;  Adjust as necessary 
+}
+
+.watch-body {
+    width: 100%;
+    z-index: 1;  Watch body stays below the dial 
+}
+
+.watch-dial {
+    position: absolute;
+    width: 100%;
+    top: 0;  Align with the watch body 
+    left: 0;
+    z-index: 2;  Dial stays on top of the watch body 
+    transition: opacity 0.3s ease;  Smooth transition effect 
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+} */
+
+/* Make footer responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
